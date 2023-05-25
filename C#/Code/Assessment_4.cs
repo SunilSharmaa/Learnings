@@ -12,7 +12,7 @@
             //variables to create fibonacci series
             int start=0, next=1, total;
 
-            Console.WriteLine("Fibonacci series are");
+            Console.WriteLine("Fibonacci series are:");
 
             //defined logic to calculate series
             for (int i = 0; i < inputnumber; i++)
