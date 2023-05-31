@@ -15,6 +15,7 @@
             }
 
             Console.WriteLine("\nAfter reversing the order");
+            //logic for printing names in reverse order
             for (int i = 4; i >= 0; i--)
             {
                 Console.Write("{0}. ", 5 - i);

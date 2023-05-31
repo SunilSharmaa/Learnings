@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-
+            //asking user to enter size of the array
             Console.WriteLine("Enter the size of the array ");
             int sizeOfArray = Convert.ToInt32(Console.ReadLine());
 
@@ -12,6 +12,7 @@
             Console.WriteLine("enter {0} elements", sizeOfArray);
 
             int sum = 0;
+            //taking elements  from the user and also calculating sum of all the even number
             for (int i = 0; i < sizeOfArray; i++)
             {
                 arrayOfNumbers[i] = Convert.ToInt32(Console.ReadLine());
