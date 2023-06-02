@@ -5,11 +5,20 @@
         static void Main()
         {
             //creating array of size 5 and initializing 
-            int[] arrayOfNumbers = new int[5] {1, 2, 3, 4, 5}; 
+            int[] arrayOfNumbers = new int[5] { 1, 2, 3, 4, 5 };
             Console.Write("enter any number : ");
-
-            //asking user to enter number for searching
-            int inputNumber = Convert.ToInt32(Console.ReadLine());
+            int inputNumber = 0;
+            try
+            {
+                //asking user to enter number for searching
+                inputNumber = Convert.ToInt32(Console.ReadLine());
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Exception!! \nPlease enter only integer number");
+                return;
+            }
+            
 
             //checking if the number is present in the array
             bool found = arrayOfNumbers.Contains(inputNumber);
