@@ -4,9 +4,30 @@
     {
         static void Main()
         {
-            //asking user to enter array size
-            Console.Write("Enter the size of the array : ");
-            int input = Convert.ToInt32(Console.ReadLine());
+            int input = 0;
+            //checking for invalid input
+            try
+            {
+                //asking user to enter array size
+                Console.Write("Enter the size of the array : ");
+                input = Convert.ToInt32(Console.ReadLine());
+
+                //will throw error if the size is 0 or less then zero
+                if (input == 0 || input < 0)
+                {
+                    throw new ArgumentException();
+                }
+            } 
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input: enter integer number only");
+                return;
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("value cannot be zero or less then zero");
+                return;
+            }
 
             //creating array of string with the size of user given number
             string[] arrayOfString = new string[input];
