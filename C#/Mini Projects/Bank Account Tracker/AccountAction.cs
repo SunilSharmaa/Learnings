@@ -169,8 +169,13 @@ namespace Bank_Account_Tracker
         }
 
         //method for storing data into files
-        public void WriteDataToFile (string filePath)
+        public void WriteDataToFile ()
         {
+            //creating directory and file
+            string folderPath = @"\BankRecords";
+            Directory.CreateDirectory(folderPath);
+            string filePath = Path.Combine(folderPath, "AccountsRecords.json");
+
             try
             {
                 string jsonString = JsonSerializer.Serialize(accountData);
@@ -185,9 +190,13 @@ namespace Bank_Account_Tracker
         }
 
         //method for reading data from file
-        public void ReadDataFromFile (string filePath)
+        public void ReadDataFromFile ()
         {
-            if(File.Exists(filePath))
+            // Define the folder path and file path
+            string folderPath = @"\BankRecords";
+            string filePath = Path.Combine(folderPath, "AccountsRecords.json");
+
+            if (File.Exists(filePath))
             {
                 string jsonString = File.ReadAllText(filePath);
                 accountData = JsonSerializer.Deserialize < List<AccountCredentials<T1,T2,T3,T4>>>(jsonString);

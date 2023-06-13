@@ -7,7 +7,6 @@ namespace Bank_Account_Tracker
         {
             AccountAction<string, string, decimal, int> accountAction = new AccountAction<string, string, decimal, int>();
             //storing data into files
-            string filePath = @"D:/programming/c# learning/Bank Account Tracker/AccountDetails.json";
 
             while (true)
             {
@@ -38,10 +37,10 @@ namespace Bank_Account_Tracker
                             accountAction.DisplayRecords();
                             break;
                         case 5:
-                            accountAction.WriteDataToFile(filePath);
+                            accountAction.WriteDataToFile();
                             break;
                         case 6:
-                            accountAction.ReadDataFromFile(filePath);
+                            accountAction.ReadDataFromFile();
                             break;
                         case 7:
                             Console.WriteLine("Exiting...");

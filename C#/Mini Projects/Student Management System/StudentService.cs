@@ -137,9 +137,14 @@ namespace Student_Management_System
             Console.WriteLine("Student not found");
         }
 
-        public void WritingDataToFiles(string filePath)
+        public void WritingDataToFiles()
         {
-     
+            //creating a path and combining the file
+            string folderPath = @"\Records";
+            Directory.CreateDirectory(folderPath);
+            string filePath = Path.Combine(folderPath, "StudentRecords.json");
+
+            //serializing the student data into json string cariable
             string jsonString = JsonSerializer.Serialize(studentData);
             File.WriteAllText(filePath, jsonString);
 
@@ -147,8 +152,13 @@ namespace Student_Management_System
         }
 
 
-        public void ReadingDataFromFiles(string filePath)
+        public void ReadingDataFromFiles()
         {
+            // Define the folder path and file path
+            string folderPath = @"\Records";
+            string filePath = Path.Combine(folderPath, "StudentRecords.json");
+
+            //checking if the file exist or not
             if (File.Exists(filePath))
             {
                 string jsonString = File.ReadAllText(filePath);

@@ -7,9 +7,6 @@
             //created object of Task class
             Task taskManager = new Task();
 
-            //path for storing data into file
-            string filePath = @"D:/programming/c# learning/Task Tracker/TaskDetails.json";
-
             //created menu for user to select option
             while (true)
             {
@@ -35,10 +32,10 @@
                             taskManager.DisplayPendingTask();
                             break;
                         case 4:
-                            taskManager.WritingDataToFiles(filePath);
+                            taskManager.WritingDataToFiles();
                             break; ;
                         case 5:
-                            taskManager.ReadDataFromFiles(filePath);
+                            taskManager.ReadDataFromFiles();
                             break;
                         case 6:
                             Console.WriteLine("Exiting...");

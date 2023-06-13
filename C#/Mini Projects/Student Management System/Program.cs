@@ -15,9 +15,6 @@ namespace Student_Management_System
             StudentService studentManagement = new StudentService();
             int input = 0;
 
-            //this is the filepath where we will store the data into file
-            string filePath = @"D:\programming\c# learning\Student Management System\StudentRecords.json";
-
             while (true)
             {
                 Console.WriteLine("\n-----Student Management System-----");
@@ -65,10 +62,10 @@ namespace Student_Management_System
                         break;
                     case 5:
                         
-                        studentManagement.WritingDataToFiles(filePath);
+                        studentManagement.WritingDataToFiles();
                         break;
                     case 6:
-                        studentManagement.ReadingDataFromFiles(filePath);
+                        studentManagement.ReadingDataFromFiles();
                         break;
                     case 7:
                         Console.WriteLine("Exiting...");

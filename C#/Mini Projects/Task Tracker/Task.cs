@@ -86,8 +86,13 @@ namespace Tast_Tracker
             }
         }
 
-        public void WritingDataToFiles(string filePath)
+        public void WritingDataToFiles()
         {
+            //creatiing directory and file
+            string folderPath = @"\TaskRecords";
+            Directory.CreateDirectory(folderPath);
+            string filePath = Path.Combine(folderPath, "TaskRecords.json");
+
             try
             {
                 string jsonString = JsonSerializer.Serialize(tasks);
@@ -101,13 +106,16 @@ namespace Tast_Tracker
             }
         }
 
-        public void ReadDataFromFiles(string filePath)
+        public void ReadDataFromFiles()
         {
+            // Define the folder path and file path
+            string folderPath = @"\TaskRecords";
+            string filePath = Path.Combine(folderPath, "TaskRecords.json");
+
             if (File.Exists(filePath))
             {
                 string jsonString = File.ReadAllText(filePath);
                 tasks = JsonSerializer.Deserialize<List<TaskProperties>>(jsonString);
-                //File.ReadAllText (filePath);
 
                 Console.WriteLine("Data read from file successfully");
 
