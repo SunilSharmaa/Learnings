@@ -108,21 +108,39 @@ namespace Tast_Tracker
 
         public void ReadDataFromFiles()
         {
-            // Define the folder path and file path
-            string folderPath = @"\TaskRecords";
-            string filePath = Path.Combine(folderPath, "TaskRecords.json");
-
-            if (File.Exists(filePath))
+            try
             {
-                string jsonString = File.ReadAllText(filePath);
-                tasks = JsonSerializer.Deserialize<List<TaskProperties>>(jsonString);
+                // Define the folder path and file path
+                string folderPath = @"\TaskRecords";
+                string filePath = Path.Combine(folderPath, "TaskRecords.json");
 
-                Console.WriteLine("Data read from file successfully");
+                if (File.Exists(filePath))
+                {
+                    string jsonString = File.ReadAllText(filePath);
+                    tasks = JsonSerializer.Deserialize<List<TaskProperties>>(jsonString);
 
+                    Console.WriteLine("Data read from file successfully");
+
+                }
+                else
+                {
+                    Console.WriteLine("File not found");
+                }
             }
-            else
+
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("File not found");
+            }
+
+            catch (JsonException)
+            {
+                Console.WriteLine("Error file reading the file from Json string");
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

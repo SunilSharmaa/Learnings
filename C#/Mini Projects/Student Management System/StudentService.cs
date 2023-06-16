@@ -154,21 +154,38 @@ namespace Student_Management_System
 
         public void ReadingDataFromFiles()
         {
-            // Define the folder path and file path
-            string folderPath = @"\Records";
-            string filePath = Path.Combine(folderPath, "StudentRecords.json");
-
-            //checking if the file exist or not
-            if (File.Exists(filePath))
+            try
             {
-                string jsonString = File.ReadAllText(filePath);
-                studentData = JsonSerializer.Deserialize<List<StudentModel>>(jsonString);
+                // Define the folder path and file path
+                string folderPath = @"\Records";
+                string filePath = Path.Combine(folderPath, "StudentRecords.json");
 
-                Console.WriteLine("Data read from file successfully.");
+                //checking if the file exist or not
+                if (File.Exists(filePath))
+                {
+                    string jsonString = File.ReadAllText(filePath);
+                    studentData = JsonSerializer.Deserialize<List<StudentModel>>(jsonString);
+
+                    Console.WriteLine("Data read from file successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Data file does not exist.");
+                }
             }
-            else
+            catch (FileNotFoundException)
             {
-                Console.WriteLine("Data file does not exist.");
+                Console.WriteLine("File not Found.");
+            }
+
+            catch (JsonException)
+            {
+                Console.WriteLine("Error while reading Json data");
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 

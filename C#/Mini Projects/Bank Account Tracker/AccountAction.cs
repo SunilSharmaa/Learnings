@@ -192,20 +192,38 @@ namespace Bank_Account_Tracker
         //method for reading data from file
         public void ReadDataFromFile ()
         {
-            // Define the folder path and file path
-            string folderPath = @"\BankRecords";
-            string filePath = Path.Combine(folderPath, "AccountsRecords.json");
-
-            if (File.Exists(filePath))
+            try
             {
-                string jsonString = File.ReadAllText(filePath);
-                accountData = JsonSerializer.Deserialize < List<AccountCredentials<T1,T2,T3,T4>>>(jsonString);
+                // Define the folder path and file path
+                string folderPath = @"\BankRecords";
+                string filePath = Path.Combine(folderPath, "AccountsRecords.json");
 
-                Console.WriteLine("Data read from file successfully.");
+                if (File.Exists(filePath))
+                {
+                    string jsonString = File.ReadAllText(filePath);
+                    accountData = JsonSerializer.Deserialize<List<AccountCredentials<T1, T2, T3, T4>>>(jsonString);
+
+                    Console.WriteLine("Data read from file successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("File not found.");
+                }
             }
-            else
+
+            catch (FileNotFoundException)
             {
-                Console.WriteLine("File not found.");
+                Console.WriteLine("File not found");
+            }
+
+            catch (JsonException)
+            {
+                Console.WriteLine("Error while reading the data from Json");
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
