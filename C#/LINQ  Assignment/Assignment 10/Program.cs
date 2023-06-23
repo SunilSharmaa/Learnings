@@ -6,11 +6,11 @@
         {
             Person person = new Person();
 
-            Console.WriteLine("Enter the number of person you wan to add in List 1");
+            Console.WriteLine("Enter the number of person you want to add in List 1");
             
             if (int.TryParse(Console.ReadLine(), out int sizeList1) && sizeList1 > 0)
             {
-                Console.WriteLine("\nEnter the number of person you wan to add in List 2");
+                Console.WriteLine("\nEnter the number of person you want to add in List 2");
 
                 if (int.TryParse(Console.ReadLine(),out int sizeList2) && sizeList2 > 0)
                 {

@@ -95,16 +95,43 @@ namespace Assignment_10
 
         public void GetCommonPerson ()
         {
-            var commonPerson = from list1 in PersonList1
-                               join list2 in PersonList2 on new { list1.Name, list1.Age } equals new { list2.Name, list2.Age }
-                               select list1;
+            var commonPerson = PersonList1.Intersect(PersonList2);
 
             Console.WriteLine("\n-----------\nList of common people are:\n------------\n");
             foreach (var person in commonPerson)
             {
+                Console.WriteLine("");
                 Console.WriteLine(person.Name);
                 Console.WriteLine(person.Age);
             }
+
+            var nonMatchingPerson = PersonList1.Concat(PersonList2)
+                                       .Except(commonPerson);
+
+            Console.WriteLine("\n-----------\nList of non-matching people:\n------------\n");
+            foreach (var person in nonMatchingPerson)
+            {
+                Console.WriteLine("");
+                Console.WriteLine(person.Name);
+                Console.WriteLine(person.Age);
+            }
+
+        }
+
+        
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Person other)
+            {
+                return Name == other.Name && Age == other.Age;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Age);
         }
     }
 }
