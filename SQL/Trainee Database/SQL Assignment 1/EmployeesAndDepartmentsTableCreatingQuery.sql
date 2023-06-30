@@ -1,0 +1,15 @@
+USE TraineeDB;
+
+CREATE TABLE Employees (
+EmployeeID INT NOT NULL UNIQUE,
+FirstName VARCHAR(20) NOT NULL,
+LastName VARCHAR(20) NOT NULL,
+Email VARCHAR(30) NOT NULL,
+DepartmentID INT NOT NULL
+);
+
+CREATE TABLE Departments (
+DepartmentID INT NOT NULL UNIQUE,
+DepartmentName VARCHAR(20) NOT NULL,
+DLocation VARCHAR(50) NOT NULL
+);

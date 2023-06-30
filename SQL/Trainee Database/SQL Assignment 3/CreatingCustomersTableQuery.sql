@@ -1,0 +1,8 @@
+USE TraineeDB;
+
+CREATE TABLE Customers(
+CustomerID INT UNIQUE,
+CustomerName VARCHAR(50) NOT NULL,
+Email VARCHAR(30) NOT NULL,
+City VARCHAR(30) NOT NULL
+);
