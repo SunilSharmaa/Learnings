@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array_one = ["gamma","bmol","dalla"];
+
+        // let array_two = array_one;
+
+        // array_two.push("bawla");
+
+        // let object_one = {
+        //     user: "unda",
+        //     age: 23
+        // };
+
+        // let object_two = object_one;
+
+        // object_two.age = 24;
+
+        // let object_three = {};
+
+        // Object.assign(object_three,object_two);
+
+        // // object_three.name = "kevin";
+
+        // let fruits = ["mango", "apple", "orange"];
+
+        // let fruits_two = [];
+
+        // Object.assign(fruits_two,fruits);
+
+        // fruits_two.push("kiwi");
+
+        // let fruits_three = [...array_one];
+
+        // fruits_three.push("banana");
+
+        let user1 = {
+            name1 : "gamma",
+            age : 24,
+            address : {
+                city:"bhopal",
+                pinCode: 462004
+            }
+        }
+
+        // let user2 = {...user1};
+        let user2 ={};
+        Object.assign(user2,user1)
+
+        user2.name1 = "unda";
+        user2.age = 23;
+        user2.address.city = "satna";
+        
+    </script>
+</body>
+</html>

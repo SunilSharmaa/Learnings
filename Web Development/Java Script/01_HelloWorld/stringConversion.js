@@ -1,0 +1,9 @@
+console.log(typeof(String(10)));
+console.log(typeof((10).toString()));
+console.log(typeof(String(true)));
+console.log(typeof(String(null)));
+console.log(typeof(String(undefined)));
+console.log(typeof(String(NaN)));
+console.log(typeof((NaN).toString()));
+console.log(typeof((null).toString()));
+console.log(typeof((undefined)).toString()));

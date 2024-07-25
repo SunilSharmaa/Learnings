@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let meta = {
+            name: "harsh",
+            age: 25,
+            social: {
+                facebook:{
+                    ac1: "fb1@gmail.com",
+                    ac2: "fb2@gmail.com"
+                },
+                twitter:{
+                    free:{
+                        ac1: "t1@gmail.com",
+                        ac2: "t2@gmail.com"
+                    }
+                }
+            }
+        }
+        debugger
+        // let meta2 = JSON.parse(JSON.stringify(meta));
+        function makeDeepCopy(obj){
+            
+            if(typeof obj !== "object" || obj === null) {
+                return obj;
+            }
+
+            let copiedval = Array.isArray(obj) ? [] : {};
+            var keys = Object.keys(obj);
+
+            for(let i = 0; i < keys.length; i++) {
+                copiedval[keys[i]] = makeDeepCopy(obj[keys[i]])
+            }
+
+            return copiedval;
+        }
+
+        let meta2 = makeDeepCopy(meta);
+    </script>
+</body>
+</html>
