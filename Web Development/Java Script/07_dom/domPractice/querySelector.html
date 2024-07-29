@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testClass{
+            color: beige;
+            background-color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="item" style="color:chocolate">Item 1</div>
+    <div id="div2" class="item testClass">Item 2</div>
+    <div id="div3" class="item2">Item 3</div>
+    <div class="item2">Item 4</div>
+    <div class="item2">Item 5</div>
+
+    <img id="sampleImage" src="sample1.jpg" alt="image">
+
+    <script>
+        
+        setTimeout(()=>{
+            // let image = document.getElementById("sampleImage");
+            // image.setAttribute("src","sample2.jpg")
+
+            document.getElementById("sampleImage").setAttribute("src","sample2.jpg");
+
+
+            let getAtt = document.getElementById("div2").getAttribute("class");
+        document.getElementById("div3").setAttribute("class",getAtt);
+
+        // document.getElementById("div1").setAttribute("style","text-align:center;")
+
+            document.getElementById("div1").style.textAlign = "center";
+
+            document.getElementById("div1").classList.add("testClass")
+
+            document.getElementById("div2").classList.remove("testClass");
+
+        },3000);
+
+        
+
+
+    </script>
+</body>
+</html>

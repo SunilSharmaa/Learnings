@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p id="par1">existing para</p>
+    </div>
+
+    <script>
+        let newElement = document.createElement("p");
+        newElement.innerHTML = "<p><b>This is dynamic para </b></p>";
+        let existingElement = document.getElementById("container");
+        
+
+        let existingPara = document.getElementById("par1")
+
+        existingElement.insertBefore(newElement,existingPara);
+
+        let count = document.querySelectorAll("p");
+        console.log(count.length);
+    </script>
+</body>
+</html>

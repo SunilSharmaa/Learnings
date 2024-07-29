@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showContactForm() {
+            let form = document.getElementById('form');
+            form.innerHTML += `<form>
+                <label for="name">Enter Name: </label> <br>
+                <input type="text"> <br>
+
+                <label for="phone">Phone no.: </label> <br>
+                <input type="text"> <br>
+                </form>`;
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <h3>greetings</h3>
+        </div>
+
+        <div>
+            <button onclick="showContactForm()">Do you want to enter details?</button>
+        </div>
+
+        <div id="form">
+
+        </div>
+    </div>
+</body>
+</html>
