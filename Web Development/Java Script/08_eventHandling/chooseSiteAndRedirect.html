@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(arg) {
+            let response = confirm(`Are you sure you want to visit ${arg}`);
+
+            return (response === true? true : false);
+        }
+    </script>
+</head>
+<body>
+    <ul>Choose any site
+
+        <li><a href="http://www.google.co.in" onclick="return check(`Google`);">Google</a></li>
+        <li><a href="http://www.facebook.com" onclick="return check(`Facebook`)">Facebook</a></li>
+
+    </ul>
+</body>
+</html>

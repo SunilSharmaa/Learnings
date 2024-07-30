@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default behaviour change</title>
+    <script>
+
+        function verify(){
+            let message = confirm(`Redirect to Google, are you sure?`);
+
+            if(message === true){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <a href="http://www.google.co.in" onclick="return verify(); ">Click for visiting Google search</a>
+    
+</body>
+</html>
