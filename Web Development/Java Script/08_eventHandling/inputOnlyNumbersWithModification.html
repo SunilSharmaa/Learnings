@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Number Validation</title>
+  <style>
+    .error {
+      border: 1px solid crimson;
+      color: crimson;
+    }
+    .success {
+      border: 1px solid limegreen;
+      color: limegreen;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputBox" placeholder="Type something...">
+    <script>
+         const inputBox = document.getElementById("inputBox");
+
+inputBox.addEventListener("input", (arg) => {
+  const inputValue2 = arg.key;
+  const inputValue = inputBox.value;
+  // console.log(inputValue);
+  console.log(inputValue2);
+  if (/^\d+$/.test(inputValue)) {
+    inputBox.classList.add("success");
+    inputBox.classList.remove("error");
+  } else {
+    inputBox.classList.add("error");
+    inputBox.classList.remove("success");
+  }
+});
+    </script>
+</body>
+</html>
