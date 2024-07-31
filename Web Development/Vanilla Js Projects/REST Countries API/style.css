@@ -8,7 +8,7 @@
 :root {
     /* font size */
     --font-size-14 : 0.875rem;
-    --font-size-16 : 1rem;
+    --font-size-16 : 1.2rem;
 
     /* font weight */
     --300 : 300;
@@ -24,3 +24,39 @@
     --dark-blue-d-mode : #202c37;
 }
 
+body {
+    background-color: var(--light-gray-l-mode);
+}
+
+/* utility class */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* header section */
+header {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.113)
+}
+
+.header-section {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    background-color: var(--white);
+}
+
+.header-text {
+    font-size: var(--font-size-16);
+    font-weight: var(--800);
+}
+
+.light-dark-mode span {
+    font-weight: var(--600);
+}
