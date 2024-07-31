@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nunito;
+}
+
+:root {
+    /* font size */
+    --font-size-14 : 0.875rem;
+    --font-size-16 : 1rem;
+
+    /* font weight */
+    --300 : 300;
+    --600 : 600;
+    --800 : 800;
+
+    /* colors */
+    --white : #ffffff;
+    --light-gray-l-mode : #fafafa;
+    --dark-gray-l-mode : #858585;
+    --dark-blue : #2b3945;
+    --dark-blue-l-mode : #111517;
+    --dark-blue-d-mode : #202c37;
+}
+
