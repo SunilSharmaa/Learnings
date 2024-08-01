@@ -4,9 +4,10 @@ async function getData() {
 
     let countriesCard = document.querySelector(".countries-card");
     data.forEach((value)=> {
-        
+
         let card = document.createElement("a");
         card.setAttribute("href", "#");
+        card.classList.add("flex")
         card.classList.add("card");
         let cardContent = `
                 <img src="${value.flags.svg}" alt="South georgia">

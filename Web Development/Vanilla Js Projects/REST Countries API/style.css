@@ -73,8 +73,11 @@ header {
     max-width: 1400px;
 }
 
+.countries-card a {
+    flex-direction: column;
+}
+
 .card {
-    display: inline-block;
     margin-top: 4rem;
     max-width: 250px;
     min-width: 250px;
@@ -86,7 +89,8 @@ header {
     text-decoration: none;
     color: inherit;
     transition: transform 0.1s ease-in-out;
-    max-height: 350px;
+    max-height: 315px;
+    min-height: 315px;
 }
 
 .countries-card a img {
