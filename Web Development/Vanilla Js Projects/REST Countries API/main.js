@@ -1,12 +1,13 @@
 async function getData() {
     let response = await fetch("https://restcountries.com/v3.1/all#");
     let data = await response.json();
+    console.log(data);
 
     let countriesCard = document.querySelector(".countries-card");
     data.forEach((value)=> {
 
         let card = document.createElement("a");
-        card.setAttribute("href", "#");
+        card.href = `/country.html?name=${value.name.common}`
         card.classList.add("flex")
         card.classList.add("card");
         let cardContent = `
