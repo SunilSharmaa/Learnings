@@ -70,12 +70,14 @@ header {
 .countries-card {
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1400px;
 }
 
 .card {
     display: inline-block;
     margin-top: 4rem;
     max-width: 250px;
+    min-width: 250px;
     background-color: var(--white);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
     padding-bottom: 1.2rem;
@@ -84,6 +86,11 @@ header {
     text-decoration: none;
     color: inherit;
     transition: transform 0.1s ease-in-out;
+    max-height: 350px;
+}
+
+.countries-card a img {
+    max-height: 167px;
 }
 
 .card:hover {
@@ -103,10 +110,6 @@ header {
 .country-name {
     font-weight: var(--800);
     font-size: var(--font-size-16);
-}
-
-.card-content span.country-name {
-    text-align: center;
 }
 
 .population,
