@@ -1,16 +1,26 @@
-function getQueryString() {
-    let urlParam = new URLSearchParams(location.search);
-    let params = urlParam.get("name");
+window.onload = () => {
+    function getQueryString() {
+        let urlParam = new URLSearchParams(location.search);
+        let params = urlParam.get("name");
+        
+        document.title = params;
+        let url = `https://restcountries.com/v3.1/name/${params}?fullText=true`;
+        getData(url);
+    }
     
-    document.title = params;
-    let url = `https://restcountries.com/v3.1/name/${params}?fullText=true`;
-    getData(url);
-}
+    async function getData(countryUrl) {
+        let response = await fetch(countryUrl);
+        let data = await response.json();
+        console.log(data[0]);
+    }
+    
+    let backButton = document.querySelector(".back-button");
 
-async function getData(countryUrl) {
-    let response = await fetch(countryUrl);
-    let data = await response.json();
-    console.log(data[0]);
-}
+    backButton.addEventListener("click", ()=> {
+        window.history.back();
+    })
 
-getQueryString();
+
+    
+    getQueryString();
+}

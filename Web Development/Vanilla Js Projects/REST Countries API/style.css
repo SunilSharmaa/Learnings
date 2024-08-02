@@ -1,8 +1,9 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: nunito;
+    font-family: nunito, sans-serif;
 }
 
 :root {
@@ -48,7 +49,7 @@ header {
 }
 
 .header-section {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     max-width: 1400px;
     justify-content: space-between;
@@ -111,7 +112,7 @@ header {
     margin-top: 0.8rem;
 }
 
-.country-name {
+.countries-name {
     font-weight: var(--800);
     font-size: var(--font-size-16);
 }

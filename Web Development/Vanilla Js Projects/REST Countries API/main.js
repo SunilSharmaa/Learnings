@@ -14,7 +14,7 @@ async function getData() {
                 <img src="${value.flags.svg}" alt="South georgia">
 
                 <div class="card-content">
-                    <span class="country-name">${value.name.common}</span>
+                    <span class="countries-name">${value.name.common}</span>
                     <div class="population">
                         <p><b>Population:&nbsp;&nbsp;</b><span class="value">${value.population}</span></p>
                     </div>
