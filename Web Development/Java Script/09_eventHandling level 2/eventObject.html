@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Item Click Example</title>
+    <style>
+        /* Style to change color to crimson when clicked */
+        .crimson {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        // Get reference to the list
+        let list = document.getElementById("myList");
+
+        // Get all list items
+        let listItems = list.getElementsByTagName("li");
+
+        // Loop through each list item and add event listener
+        // for (let i = 0; i < listItems.length; i++) {
+        //     listItems[i].addEventListener("click", function(event) {
+        //         // Change color to crimson when clicked
+        //         event.target.classList.add("crimson");
+        //     });
+        // }
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].addEventListener("click", function(event) {
+                // Remove the clicked list item from the list
+                list.removeChild(event.target);
+                
+            });
+        }
+    </script>
+
+</body>
+</html>

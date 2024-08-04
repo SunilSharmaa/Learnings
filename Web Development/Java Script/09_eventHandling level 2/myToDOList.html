@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 20px 0;
+            padding: 0;
+            text-align: center;
+            /* font-size: rem; */
+        }
+
+        ul li{
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 30px;
+            background: rgb(222, 219, 219)
+        }
+
+        ul li:first-child {
+            margin-top: 20px; /* Add space between the text inside <ul> and the first <li> item */
+        }
+
+        ul li:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        ul .introText{
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        
+    </style>
+
+    <script src="myscript.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h2 id="Heading">My Todo List</h1>
+        </div>
+        <div>
+            <ul id="listContainer">
+                <span class="introText">Hello, Check the List</span>
+
+                <li>Pay The Bills</li>
+                <li>Take Online Lecture</li>
+                <li>Read A Book</li>
+                <li>Listen To The Music</li>
+            </ul>
+        </div>
+
+        <div>
+            <button id="addNewElement">Add new item</button>
+        </div>
+    </div>
+</body>
+</html>

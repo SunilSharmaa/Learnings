@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head1 {
+            text-align: center;
+        }
+        img {
+            position: relative;
+            left: 30%;
+            padding: 20px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 id="head1">Heading</h1>
+
+        <img id="image" src="sachin1.jpg" alt="sachin1">
+    </div>
+
+    <script>
+        let image = document.getElementById("image");
+
+        image.addEventListener("mouseover", () => {
+            // Change width to 400px
+            image.style.width = "400px";
+
+            // Delay image source change after 1 second
+            setTimeout(() => {
+                image.src = "sachin2.jpg";
+            }, 1000);
+        });
+
+        image.addEventListener("mouseout", () => {
+            // Revert width back to 250px
+            image.style.width = "250px";
+        });
+    </script>
+
+</body>
+</html>

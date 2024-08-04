@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting HTML Element</title>
+</head>
+<body>
+
+<!-- Existing container where the new element will be added -->
+<div id="container">
+    <h1>This is the Container</h1>
+</div>
+
+<script>
+    // Step 1: Create a new paragraph element
+    let newParagraph = document.createElement("p");
+
+    // Step 2: Create a new text node and set its content
+    let newText = document.createTextNode("This is a new paragraph added dynamically.");
+
+    // Step 3: Add the text node to the paragraph element
+    newParagraph.appendChild(newText);
+
+    // Step 4: Get a reference to the container and the target element
+    let container = document.getElementById("container");
+
+    // Step 5: Insert the paragraph element before the target element
+    container.appendChild(newParagraph);
+</script>
+
+</body>
+</html>

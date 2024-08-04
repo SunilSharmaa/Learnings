@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>I am div
+        <ul> I am ul
+            <li>I am list</li>
+        </ul>
+    </div>
+
+    <script>
+        let li = document.querySelector("li");
+        li.addEventListener("click", ()=>{
+            console.log(`list`);
+        })
+        // let ul = document.querySelector("ul");
+        // ul.addEventListener("click", ()=>{
+        //     console.log(`ul`);
+        // })
+        let div = document.querySelector("div");
+        div.addEventListener("click", (event)=>{
+            console.log(`div`);
+            // event.stopPropagation();
+        })
+    </script>
+</body>
+</html>
