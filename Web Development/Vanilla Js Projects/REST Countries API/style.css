@@ -37,6 +37,7 @@ img {
 .container {
     width: 80%;
     margin: 0 auto;
+    max-width: 1400px;
 }
 
 .flex {
@@ -125,5 +126,39 @@ header {
 }
 
 .value {
+    color: var(--dark-gray-l-mode);
+}
+
+/* search section */
+.search-section {
+    /* border : 2px solid red; */
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.input-box-container {
+    /* border: 1px solid black; */
+    padding: 0.7rem 2rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.075);
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    caret-color: var(--dark-gray-l-mode);
+    color: var(--dark-gray-l-mode);
+    /* border: 2px solid black; */
+    padding-right: 10rem;
+    
+}
+
+.input-box input::placeholder {
+    color: var(--dark-gray-l-mode);
+}
+
+.search-icon i {
     color: var(--dark-gray-l-mode);
 }
