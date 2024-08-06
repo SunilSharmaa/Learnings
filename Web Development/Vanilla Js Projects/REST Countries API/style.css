@@ -59,6 +59,11 @@ header {
     background-color: var(--white);
 }
 
+.header-section a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header-text {
     font-size: var(--font-size-16);
     font-weight: var(--800);
@@ -161,4 +166,57 @@ header {
 
 .search-icon i {
     color: var(--dark-gray-l-mode);
+}
+
+/* filter box */
+.filter-box {
+    background-color: var(--white);
+    padding: 0.7rem 1.3rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
+    gap: 12px;
+}
+
+.filter-box span {
+    font-size: var(--font-size-14)
+}
+
+.filter-box i {
+    /* transition: transform 0.1s ease-in-out; */
+}
+
+.degree-180 {
+    transform: rotate(-180deg);
+}
+
+.region-countries {
+    position: absolute;
+    background-color: var(--white);
+    margin-top: 5px;
+    /* width: 100%; */
+    padding: 0.7rem 1.3rem;
+    padding-right: 6rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.hidden {
+    visibility: visible;
+}
+
+.region-countries ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.region-countries ul li {
+    list-style: none;
+    font-size: var(--font-size-14);
+    transition: transform 0.1s ease-in-out;
+}
+
+.region-countries ul li:hover {
+    transform: scale(1.1);
 }

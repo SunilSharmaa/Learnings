@@ -48,3 +48,24 @@ input.addEventListener("input", ()=> {
 
    createCountryCard(filteredCountries);
 })
+
+let regionCountriesUl = document.querySelector(".region-countries ul");
+
+regionCountriesUl.addEventListener("click", (e) => {
+    console.log(e.target.innerText);
+
+    async function getRegionCountries(country) {
+        let response = await fetch(`https://restcountries.com/v3.1/region/${country}`);
+        let data = await response.json();
+        createCountryCard(data);
+    }
+
+    getRegionCountries(e.target.innerText);
+})
+
+let filterToggle = document.querySelector(".filter-box i");
+let regionCountries = document.querySelector(".region-countries");
+filterToggle.addEventListener("click", () => {
+    regionCountries.classList.toggle("hidden");
+    filterToggle.classList.toggle("degree-180");
+})
