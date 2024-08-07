@@ -1,5 +1,5 @@
 
-*{
+*,::before,::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -79,6 +79,9 @@ header {
 
 .light-dark-mode span {
     font-weight: var(--600);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 /* countries card */
@@ -113,6 +116,7 @@ header {
 
 .countries-card a img {
     max-height: 167px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -176,7 +180,12 @@ header {
     color: var(--dark-gray-l-mode);
 }
 
-.search-icon i {
+.search-icon,
+.input-box {
+    align-items: center;
+}
+
+.search-icon ion-icon {
     color: var(--dark-gray-l-mode);
 }
 
@@ -187,14 +196,15 @@ header {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.075);
     border-radius: 5px;
     gap: 12px;
+    align-items: center;
 }
 
 .filter-box span {
     font-size: var(--font-size-14)
 }
 
-.filter-box i {
-    /* transition: transform 0.1s ease-in-out; */
+.filter-box ion-icon {
+    transition: transform 0.1s ease-in-out;
 }
 
 .degree-180 {
