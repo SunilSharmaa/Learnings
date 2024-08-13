@@ -14,7 +14,7 @@ function createCountryCard(data) {
     data.forEach((value)=> {
         // console.log(value.name.common);
         let card = document.createElement("a");
-        card.href = `/country.html?name=${value.name.common}`
+        card.href = `country.html?name=${value.name.common}`
         card.classList.add("flex")
         card.classList.add("card");
         
