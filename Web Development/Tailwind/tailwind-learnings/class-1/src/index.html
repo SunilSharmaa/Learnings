@@ -6,23 +6,37 @@
     <title>tailwind class 1</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <div class="p-6 max-w-md mx-auto ">
-        <div class="flex items-center">
-            <img class="w-16" src="../media/beach-logo.svg" alt="beach-logo">
-            <h2 class="font-bold text-2xl mt-4">Work<span class="text-blue-600">cation</span></h2>
+<body class="bg-gray-300">
+    <div class="grid lg:grid-cols-2 bg-gray-100">
+        <div class="p-6 max-w-md mx-auto
+        sm:max-w-xl
+        lg:px-12 lg:py-28 lg:max-w-full">
+            <div class="flex items-center">
+                <img class="w-16" src="../media/beach-logo.svg" alt="beach-logo">
+                <h2 class="font-bold text-2xl mt-4">Work<span class="text-blue-600">cation</span></h2>
+            </div>
+            <div>
+                <img class="rounded shadow-md
+                sm:h-64 sm:w-full object-cover object-center sm:mt-6
+                lg:hidden" src="../media/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="">
+            </div>
+            <div>
+                <p class="text-[18px] font-medium mt-4
+                sm:text-2xl
+                lg:text-[24px]">You can work from anywhere.</p>
+                <p class="text-[18px] font-medium text-blue-600
+                sm:text-2xl
+                lg:text-[24px]">Take advantage of it.</p>
+                <p class="mt-4 text-[12px]
+                sm:text-base
+                lg:mt-6">Workcation helps you find work friendly rentals  in beautiful location so you can enjoy some  nice weather even when you're not on vacation.</p>
+                <button class="mt-4 bg-blue-600 text-white uppercase text-[12px] font-semibold  py-2 px-4 rounded
+                lg:mt-6">book your escape</button>
+            </div>
         </div>
-        <div>
-            <img class="rounded shadow-md" src="../media/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="">
-        </div>
-
-        <div>
-            <p class="text-[18px] font-medium mt-4">You can work from anywhere.</p>
-            <p class="text-[18px] font-medium text-blue-600">Take advantage of it.</p>
-
-            <p class="mt-4 text-[12px] ">Workcation helps you find work friendly rentals <br> in beautiful location so you can enjoy some <br> nice weather even when you're not on vacation.</p>
-
-            <button class="mt-4 bg-blue-600 text-white uppercase text-[12px] font-semibold  py-2 px-4 rounded">book your escape</button>
+        <div class="hidden relative
+        lg:block">
+            <img class="absolute inset-0 h-full w-full object-cover object-center" src="../media/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="beach-image">
         </div>
     </div>
 </body>
