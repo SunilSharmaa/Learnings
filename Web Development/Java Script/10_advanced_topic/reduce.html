@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // find the sum
+
+        const arr = [23, 45, 67, 89, 12, 34, 56, 78, 90, 11];
+        console.log(arr);
+
+        const sum = arr.reduce(function(acc,current) {
+            acc = acc + current;
+            return acc;
+        },0)
+
+        console.log("sum = ",sum);
+
+
+        // find the maximum
+
+        const maximum = arr.reduce(function(acc,current) {
+            if(current > acc) {
+                acc = current;
+                }
+            return acc;
+        },arr[0])
+
+        console.log("maximum =",maximum);
+
+        // find the minimum
+        const minimum = arr.reduce(function(acc,current) {
+            if(current < acc) {
+                acc = current;
+            }
+            return acc;
+        },arr[0])
+
+        console.log("minimum =",minimum);
+
+        console.log("---------");
+    </script>
+</body>
+</html>

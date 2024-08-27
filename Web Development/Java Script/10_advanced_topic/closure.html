@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background:#696969">
+    <script>
+
+        function a(){
+            let var1 = "hello";
+
+            function b() {
+                
+                function c(){
+                    console.log(var1);
+                }
+                c();
+            }
+
+            b();
+        }
+
+        a();
+        
+        //example-2
+
+        function one() {
+            let a = 5;
+
+            function two() {
+                console.log(a);
+            }
+
+            return two;
+        }
+
+        let three = one();
+
+        console.log(three);
+
+        three();
+
+
+    </script>
+</body>
+</html>

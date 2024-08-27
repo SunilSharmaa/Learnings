@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      background-color: beige;
+      border-radius: 20px;
+      box-shadow: 0px 2px 6px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .img-container > p{
+        text-align: center;
+        margin-top: 0;
+    }
+  </style>
+  <body>
+    <h1>document.createElement</h1>
+
+    <div class="container">
+      <!-- <img class="image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="1"> -->
+    </div>
+
+    <script>
+      // let count = 1;
+      let container = document.querySelector(".container");
+
+      for(let i = 1; i <= 100; i++) {
+          // let images = document.querySelector(".image").cloneNode(true);
+          let images = document.createElement("img");
+          images.setAttribute("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`)
+          images.setAttribute("alt", i)
+
+          
+          container.appendChild(images);
+          console.log(i);
+      }
+
+    //   let div = document.createElement("div");
+    //   div.classList.add("img-container");
+
+    //   let img = document.createElement("img");
+    //   img.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";
+
+    //   let p = document.createElement("p");
+    //   p.innerText = "1";
+
+    //   container.appendChild(div);
+    //   div.appendChild(img);
+    //   div.appendChild(p);
+
+
+    </script>
+  </body>
+</html>

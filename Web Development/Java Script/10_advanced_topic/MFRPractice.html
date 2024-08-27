@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>open</h1>
+    <script>
+      //data
+    
+      const people = [
+        { firstName: "John", lastName: "Doe", age: 25 },
+        { firstName: "Jane", lastName: "Smith", age: 30 },
+        { firstName: "Alice", lastName: "Johnson", age: 25 },
+        { firstName: "Robert", lastName: "Brown", age: 35 },
+        { firstName: "Emily", lastName: "Davis", age: 22 },
+        { firstName: "Michael", lastName: "Wilson", age: 30 },
+        { firstName: "Sarah", lastName: "Taylor", age: 27 },
+        { firstName: "David", lastName: "Anderson", age: 32 },
+        { firstName: "Laura", lastName: "Thomas", age: 29 },
+        { firstName: "James", lastName: "Moore", age: 22 },
+      ];
+
+      //map
+      const fullName = people.map(function (key) {
+        return `${key.firstName} ${key.lastName}`;
+      });
+
+      console.log("Full name");
+      fullName.forEach((element) => {
+        console.log(element);
+      });
+      console.log("-------");
+      //reduce
+      const ageCount = people.reduce((acc, current) => {
+        if (acc[current.age]) {
+          acc[current.age]++;
+        } else {
+          acc[current.age] = 1;
+        }
+        return acc;
+      }, {});
+
+      console.log("Age Count");
+      console.log(ageCount);
+      console.log("-------");
+
+      const peoplesAgeLessThan30 = people
+        .filter((element) => {
+          return element.age < 30;
+        })
+        .map((element) => {
+          return element.firstName;
+        });
+
+      console.log("First name of peoples who's age is less than 30");
+      console.log(peoplesAgeLessThan30);
+      console.log("-------");
+
+      const output = people.reduce((acc, current)=>{
+        if(current.age < 30) {
+          acc.push(current.firstName);
+        } 
+
+        return acc;
+      },[])
+
+      console.log(output);
+    </script>
+  </body>
+</html>

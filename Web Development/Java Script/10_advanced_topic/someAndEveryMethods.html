@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const emails = ["test@example.com", "invalid-@email", "user@domain.com"];
+        // const hasInvalidEmail = emails.some(email => !email.includes("@"));
+
+        const hasInvalidEmail = emails.some((email)=>{
+            return email.includes("@");
+        })
+        console.log(hasInvalidEmail); // Output: true
+
+    </script>
+</body>
+</html>

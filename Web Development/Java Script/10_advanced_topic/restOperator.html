@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(...prams) {
+            // prams.forEach((element)=>{
+            //     console.log(element);
+            // })
+            let sum = 0;
+            for(let index = 0; index<prams.length;index++ ) {
+                sum += prams[index];
+            }
+            return sum;
+        }
+
+        let array1 = [5,6,4,3,4,2,2,5,6,7,1,4];
+
+        let total = add(...array1);
+
+        console.log(total);
+
+
+    </script>
+</body>
+</html>

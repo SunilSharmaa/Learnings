@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //calculate area, perimeter and diameter of circle.
+      //A=πr2
+      //P=2πr
+      //D = 2 × r
+
+      const radius = [3, 1, 2, 4];
+
+      const area = (radius) => (Math.PI * radius * radius).toFixed(2);
+
+      const perimeter = (radius) => (2 * Math.PI * radius).toFixed(2);
+
+      const diameter = (radius) => (2 * radius).toFixed(2);
+
+      function calculate(arrOfRadius, logic) {
+        const result = [];
+        for (let i = 0; i < arrOfRadius.length; i++) {
+          let area = logic(arrOfRadius[i]);
+          result.push(area);
+        }
+
+        return result;
+      }
+
+      console.log(calculate(radius, area));
+      console.log(calculate(radius, perimeter));
+      console.log(calculate(radius, diameter));
+    </script>
+  </body>
+</html>

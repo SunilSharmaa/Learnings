@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {
+                name: "Akash",
+                age: 21
+            },
+            {
+                name: "Adarsh",
+                age: 17
+            },
+            {
+                name: "Amir",
+                age: 18
+            },
+            {
+                name: "Raman",
+                age: 23
+            },
+            {
+                name: "Nidhi",
+                age: 16
+            }
+        ];
+
+        let adultStudents = students.filter((element)=>{
+            if(element.age >= 18) return true;
+        });
+
+        console.log(adultStudents);
+        
+        //chaining
+        adultStudents = students.filter((element)=>{
+            if(element.age >= 18) return true;
+        }).map((student)=>{
+            return student.name
+        }).filter((student)=>{
+            return student.includes("A");
+        })
+
+        console.log(adultStudents);
+        
+    </script>
+</body>
+</html>

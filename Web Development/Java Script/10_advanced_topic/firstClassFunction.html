@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a() {
+            console.log("a is called");
+        }
+
+        function b(param1) {
+            console.log("b is called");
+            console.log(param1);
+            param1();
+        }
+
+        b(a);
+    </script>
+</body>
+</html>

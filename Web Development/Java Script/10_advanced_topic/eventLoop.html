@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        count = 0;
+        console.log(count);
+        function printingText() {
+            count++;
+            console.log(count);
+            if(count === 5000) {
+                return;
+            }
+            printingText();
+        }
+        setTimeout(()=>{
+            console.log(`asdbgdagfkjsfjhsdfgahysdfjahgsdfhgasdhkfbebylavwbhyfbhfbwnfkjlbwjhbfuewbclkajsnchabsiucbasgdfjhasbdkjqwbdkjhqwldhkqwjdjqwhdkjhqwdjbqwjkbdnjqwbdkjbqwkjdbqkjwbdkjbqkwbdkjbqwjkdbqwkjbdkjbqwkjdbwjk`);
+        },2000)
+        printingText();
+        console.log(`done`);
+    </script>
+</body>
+</html>
+
+
+

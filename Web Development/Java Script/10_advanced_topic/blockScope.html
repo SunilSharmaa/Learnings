@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background:rgb(59, 59, 59)">
+    <script>
+        const user = "gamma";
+        for(key of user) {
+            console.log(key);
+        }
+
+        let userArray = {
+            name : "GAMMA",
+            Age : 24,
+            W_status : "pending"
+        };
+
+        console.log(userArray.name);
+        console.log(`---------------------`);
+
+        for(key in userArray) {
+            console.log(`Key: ${key} = ${userArray[key]}`);
+        }
+        console.log(`---------------------`);
+
+        let userArrayKey = Object.keys(userArray);
+        let userArrayValue = Object.values(userArray)
+
+        console.log(`Object.keys method`);
+        for(let a of userArrayKey) {
+            console.log(a);
+        }
+        console.log(`---------------------`);
+        
+        console.log(`Object.value method`);
+        for(let a of userArrayValue) {
+            console.log(a);
+        }
+        console.log(`---------------------`);
+        
+        for(let a of userArrayKey) {
+            console.log(userArray[a]);
+        }
+        console.log(`---------------------`);
+
+        for(let i=0; i<userArrayKey.length; i++) {
+            console.log(userArray[userArrayKey[i]]);
+        }
+        console.log(`---------------------`);
+        
+        let userArrayEntries = Object.entries(userArray);
+        
+        console.log(userArrayEntries);
+        console.log(`---------------------`);
+
+        for(let i =0; i<userArrayEntries.length;i++) {
+            console.log(userArrayEntries[i][0], userArrayEntries[i][1]);
+        }
+
+        let truth = "hellcat" in userArray;
+        console.log(truth);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(36, 36, 36);
+        border-radius: 25px;
+        color: beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    h1{
+        text-align: center;
+    }
+</style>
+<body style="background-color: antiquewhite;">
+
+    <h1>Append</h1>
+
+    <div class="container">
+        <div class="card">
+            1
+        </div>
+        
+    </div>
+    
+    <script>
+        let container = document.querySelector(".container");
+        let card = document.querySelector(".card");
+
+        let randomNumber = 0;
+
+        for(let i = 2; i <= 100; i++) {
+            randomNumber = Math.floor(Math.random() * 10);
+            container.appendChild(card.cloneNode(true)).innerText = randomNumber;
+        }
+
+        // container.append(card.cloneNode(true)).innerText = randomNumber;
+
+        // let newTextNode = document.createTextNode("test-node");
+        // let newH1 = document.createElement("h1");
+        // container.append(newTextNode);
+        // container.append(newH1)
+        // newH1.innerText = "test-node";
+        // console.log(newTextNode);
+    </script>
+</body>
+</html>

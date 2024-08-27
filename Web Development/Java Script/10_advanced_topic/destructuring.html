@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let user1 = [1,2,3,2,6,3,5,34,9];
+
+        let[a,b,c,d] = user1
+        // console.log(userDs);
+
+        // objects
+        let userObj = {
+            id : 9,
+            techStack : "Mern"            
+        };
+
+        let userObj2 = {
+            id : 9,
+            techStack : "Mern",
+            mentor : {
+                javaScript : "Anurag Singh",
+                HTML : "Love Babbar"
+            }
+        };
+
+        let {id,techStack} = userObj;
+        let {id : ID,techStack: stacky} = userObj;
+
+        let {mentor:{javaScript}} = userObj2;
+        let {mentor:{javaScript:demo}} = userObj2;
+
+        
+        let {mentor:{HTML:demo2}} = userObj2;
+
+        const colors = ["red", "green", "blue", "black", "white"];
+
+        console.log(colors);
+        
+        [colors[1], colors[3]] = [colors[3], colors[1]];
+        
+        console.log(colors);
+
+
+        // with function
+        function destructuringValues ({id:fID, techStack:FteckStack}) {
+            // debugger
+            console.log(fID);
+            console.log(FteckStack);
+            console.log(id);
+        }
+
+        destructuringValues(userObj);
+        
+    </script>
+</body>
+</html>

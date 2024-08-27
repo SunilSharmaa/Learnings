@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple", "banana", "mango", "peach", "grapes"];
+
+        fruits.forEach((val)=>{
+            console.log(val);
+        })
+
+        function customFE(element) {
+            console.log(element);
+        }
+
+        fruits.forEach(customFE)
+
+        let one = ["one", "two", "three"];
+        let two = one.map((val)=>{
+            console.log("testing");
+            return val.toUpperCase()
+        })
+
+        console.log(`two= ${two}`);
+
+        console.log(one.map((val, index)=> (val.toUpperCase())));
+
+        one.map((vale, index)=>{
+            console.log(index + 1, vale);
+        })
+
+        let filterMap = one.map((val)=>{
+            return val.includes("n")
+        })
+        console.log(`filterMap : ${filterMap}`);
+
+    </script>
+</body>
+</html>
