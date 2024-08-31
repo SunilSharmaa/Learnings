@@ -913,12 +913,12 @@ video {
     margin-right: 0px;
   }
 
-  .xl\:max-w-xl {
-    max-width: 36rem;
-  }
-
   .xl\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .xl\:max-w-xl {
+    max-width: 36rem;
   }
 
   .xl\:grid-cols-3 {
@@ -945,15 +945,7 @@ video {
     grid-column: span 3 / span 3;
   }
 
-  .\32xl\:grid {
-    display: grid;
-  }
-
   .\32xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .\32xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
