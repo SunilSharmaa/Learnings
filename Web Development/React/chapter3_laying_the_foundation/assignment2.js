@@ -7,7 +7,7 @@ let Para = ()=> {
 let Heading = ()=> {
     return (<div class="title">
         <h1>heading 1</h1>
-        {<Para /> }
+        {<Para />}
         <h2>heading 2</h2>
         {<Para />}
         <h3>heading 3</h3>
